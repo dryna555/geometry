@@ -1,6 +1,12 @@
 *
+!src
+!thirdparty
+!test
 !README.md
 !.gitignore
 !.clang-format
+!.travis.yml
 !*.c
+!*.h
 !Makefile
+!.gitkeep
