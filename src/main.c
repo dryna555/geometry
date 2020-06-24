@@ -1,5 +1,5 @@
-#include <math.h>
 #include "foo.h"
+#include <math.h>
 #include <stdio.h>
 #define _USE_MATH_DEFINES
 
