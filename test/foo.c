@@ -139,3 +139,20 @@ CTEST(presecli,v4)
     const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
+CTEST(circle,v1)
+{
+    // Given
+    float r1 = 1;
+    float p = 0;
+    float s = 0;
+    // When
+    float  result = circle(r1,&p,&s);
+    // Then
+    const float expected = 0;
+    const float expp = 2 * M_PI*r1;
+    const float exps = M_PI * r1 * r1;
+    ASSERT_DBL_NEAR(expected, result);
+    ASSERT_DBL_NEAR(expp, p);
+    ASSERT_DBL_NEAR(exps, s);
+}
+
