@@ -6,7 +6,7 @@
 #include <string.h>
 #define _USE_MATH_DEFINES
 
-float circle(float x, float y, float r, float* p, float* s)
+float circle(float r, float* p, float* s)
 {
     float r2;
     *p = 2 * M_PI * r;

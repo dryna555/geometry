@@ -48,7 +48,7 @@ int main()
         }
     }
     for (i = 0; i < colvo; i++) {
-        circle(x[i], y[i], r[i], &p, &s);
+        circle(r[i], &p, &s);
         printf("%d. circle(%f %f, %f)\n", i + 1, x[i], y[i], r[i]);
         printf("  perimeter = %f \n", p);
         printf("  area = %f \n", s);
