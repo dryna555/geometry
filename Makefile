@@ -27,8 +27,6 @@ build/test/foo.o: test/foo.c
 
 run: all
 	./bin/test
-	./bin/geom
-
 .PHONY: clean all run
 
 clean:
