@@ -1,23 +1,42 @@
 #include "foo.h"
+#include <ctype.h>
 #include <math.h>
 #include <stdio.h>
 #define _USE_MATH_DEFINES
 
 int main()
 {
-    int colvo, i, j;
+    int colvo = 0, i, j;
+    char n[100];
     printf("Введите количество окружностей\n");
-    scanf("%d", &colvo);
+    fgets(n, 100, stdin);
+    while (isitnum(n, &colvo) == 0) {
+        printf("Введите число\n");
+        fgets(n, 100, stdin);
+    }
     float x[colvo], y[colvo], r[colvo], p, s;
     int rez[colvo][colvo];
     for (i = 0; i < colvo; i++) {
         printf("Введите координаты центра окржности и его радиус:\n");
         printf("X = ");
-        scanf("%f", &x[i]);
+        fgets(n, 100, stdin);
+        printf("  area = %d\n", isitfl(n, &x[i]));
+        while (isitfl(n, &x[i]) == 0) {
+            printf("Введите число, разделяяя дробную часть точкой\n");
+            fgets(n, 100, stdin);
+        }
         printf("Y = ");
-        scanf("%f", &y[i]);
+        fgets(n, 100, stdin);
+        while (isitfl(n, &y[i]) == 0) {
+            printf("Введите число, разделяяя дробную часть точкой\n");
+            fgets(n, 100, stdin);
+        }
         printf("R = ");
-        scanf("%f", &r[i]);
+        fgets(n, 100, stdin);
+        while (isitfl(n, &r[i]) == 0) {
+            printf("Введите число, разделяяя дробную часть точкой\n");
+            fgets(n, 100, stdin);
+        }
         printf("\n");
     }
     for (i = 0; i < colvo; i++) {
